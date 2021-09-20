@@ -1,0 +1,32 @@
+.book-item-component {
+    width: 70vw;
+
+    .label {
+        text-align: justify;
+
+        span {
+            font-size: 12px;
+            line-height: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #B6C2D9;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--color-text);
+        }
+
+        .badge {
+            background-color: #4D7EA8;
+            display: block;
+            max-width: 100px;
+            color: var(--color-primary);
+        }
+
+        .text-bold {
+            font-weight: 700;
+        }
+    }
+}

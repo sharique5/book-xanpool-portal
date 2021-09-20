@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import Book from './Controllers/Book';
+import BookCatalog from './Controllers/BookCatalog';
+import Header from './Components/Header';
+
+const router = (
+  <Router>
+      <Header/>
+      <Route path="/" exact component={BookCatalog} />
+      <Route path="/:id" exact component={Book}/>
+  </Router>
+)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  router,
   document.getElementById('root')
 );
 
